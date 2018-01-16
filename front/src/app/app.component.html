@@ -1,0 +1,20 @@
+<mat-toolbar>
+  <button mat-raised-button color="default" 
+  routerLink="/">MEAN-JWT2 App</button>
+  <button mat-raised-button color="basic" 
+  routerLink="/users">Users</button>
+  <button mat-raised-button color="primary" 
+  routerLink="/post">Post</button>
+  <span style="flex: 1 1 auto"></span>
+
+  <button mat-raised-button color="warn" 
+    *ngIf="!apiService.isAuthenticated"
+    routerLink="/register">Register</button>
+  <button mat-raised-button color="primary" 
+    *ngIf="!apiService.isAuthenticated"
+    routerLink="/login">Login</button>
+  <button mat-raised-button color="warn" 
+    *ngIf="apiService.isAuthenticated" 
+    (click)="apiService.logout()">Logout</button>
+</mat-toolbar>
+<router-outlet></router-outlet>
