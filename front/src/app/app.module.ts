@@ -20,7 +20,8 @@ import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PostComponent } from './post/post.component';
-import { AuthInterceptorService } from './authinterceptor.service'
+import { AuthInterceptorService } from './authinterceptor.service';
+import { BarchartComponent } from './barchart/barchart.component'
 
 const routes = [
   { path: '', component: HomeComponent }, 
@@ -40,7 +41,8 @@ const routes = [
     LoginComponent,
     UsersComponent,
     ProfileComponent,
-    PostComponent
+    PostComponent,
+    BarchartComponent
   ],
   imports: [
     BrowserModule,
