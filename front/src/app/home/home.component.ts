@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   private chartData: Array<any>;
+  private dataHeights = [];
 
   constructor() { }
 
@@ -21,11 +22,17 @@ export class HomeComponent implements OnInit {
 
   generateData() {
     this.chartData = [];
-    for (let i = 0; i < (5 + Math.floor(Math.random() * 10)); i++) {
+    this.dataHeights = [];
+    let rowNumber = 3; //(5 + Math.floor(Math.random() * 10));
+    for (let i = 0; i < rowNumber; i++) {
+      let _dataHeight = Math.floor(Math.random() * 100);
+      this.dataHeights.push(_dataHeight)
       this.chartData.push([
         `Index ${i}`,
         Math.floor(Math.random() * 100)
       ]);
     }
+    console.log('dataHeights:')
+    console.log(this.dataHeights)
   }
 }

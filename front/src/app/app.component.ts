@@ -30,7 +30,5 @@ export class AppComponent {
         Math.floor(Math.random() * 100)
       ]);
     }
-    console.log("generated chartData.")
-    console.log(this.chartData)
   }
 }
