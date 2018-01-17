@@ -28,18 +28,17 @@ export class AppComponent {
     this.chartData = [];
     this.apiService.getUsers();
     this.users = this.apiService.users;
-    console.log(this.users)
-    // this.dataHeights = [];
     let rowNumber = this.users.length; //(5 + Math.floor(Math.random() * 10));
     for (let i = 0; i < rowNumber; i++) {
-      // let _dataHeight = Math.floor(Math.random() * 100);
-      // this.dataHeights.push(_dataHeight)
+      let currUser = this.users[i],
+          name = ``
+      if(currUser.name != undefined) {
+        name = ` (${currUser.name})`
+      }
       this.chartData.push([
-        `Index ${i}`,
+        `${i+1}. ${currUser.email}${name}`,
         Math.floor(Math.random() * 100)
       ]);
     }
-    // console.log('dataHeights:')
-    // console.log(this.dataHeights)
   }
 }

@@ -38,7 +38,7 @@ export class BarchartComponent implements OnInit, OnChanges {
   createChart() {
     let element = this.chartContainer.nativeElement;
     this.width = element.offsetWidth - this.margin.left - this.margin.right;
-    this.height = 150; // element.offsetHeight - this.margin.top - this.margin.bottom;
+    this.height = element.offsetHeight - this.margin.top - this.margin.bottom;
     let svg = d3.select(element).append('svg')
       .attr('width', element.offsetWidth)
       .attr('height', element.offsetHeight);
