@@ -17,4 +17,5 @@
     *ngIf="apiService.isAuthenticated" 
     (click)="apiService.logout()">Logout</button>
 </mat-toolbar>
+<barchart *ngIf="chartData" [data]="chartData"></barchart>
 <router-outlet></router-outlet>
