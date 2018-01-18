@@ -1,1 +1,8 @@
+<div id="chart4auth" *ngIf="apiService.isAuthenticated">
+  <barchart *ngIf="chartData" [data]="chartData"></barchart>
+</div>
 
+<div class="nonAuth" *ngIf="!apiService.isAuthenticated" >
+  <h3>Welcome!</h3>
+  <h4>Register or Login</h4>
+</div>

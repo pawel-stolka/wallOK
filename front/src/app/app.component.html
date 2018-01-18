@@ -1,10 +1,12 @@
 <mat-toolbar>
   <button mat-raised-button color="default" 
-  routerLink="/">The Wall OK</button>
+    routerLink="/">The Wall OK</button>
   <button mat-raised-button color="basic" 
-  routerLink="/users">Users</button>
+    *ngIf="apiService.isAuthenticated"
+    routerLink="/users">Users</button>
   <button mat-raised-button color="primary" 
-  routerLink="/post">Post</button>
+    *ngIf="apiService.isAuthenticated"
+    routerLink="/post">Post</button>
   <span style="flex: 1 1 auto"></span>
 
   <button mat-raised-button color="warn" 
@@ -18,12 +20,12 @@
     (click)="apiService.logout()">Logout</button>
 </mat-toolbar>
 
-<h3 style="text-align: center">
-    Welcome!
-  </h3>
 
-<div id="ch">
+
+  <!-- <home></home> -->
+
+<!-- <div id="ch">
 <barchart *ngIf="chartData" [data]="chartData"></barchart>
-</div>
+</div> -->
 
 <router-outlet></router-outlet>
