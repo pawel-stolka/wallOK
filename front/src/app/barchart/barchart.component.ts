@@ -53,7 +53,11 @@ export class BarchartComponent implements OnInit, OnChanges {
     let yDomain = [0, d3.max(this.data, d => d[1])];
 
     // create scales
-    this.xScale = d3.scaleBand().padding(0.1).domain(xDomain).rangeRound([0, this.width]);
+    this.xScale = d3
+      .scaleBand()
+      .padding(0.1)
+      .domain(xDomain)
+      .rangeRound([0, this.width]);
     this.yScale = d3.scaleLinear().domain(yDomain).range([this.height, 0]);
 
     // bar colors

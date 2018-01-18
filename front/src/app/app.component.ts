@@ -11,7 +11,11 @@ export class AppComponent {
   title = 'app';
   // private users: Array<any>;
 
-  constructor(private apiService: ApiService) { }
+  // public _apiService: ApiService
+
+  constructor(private apiService: ApiService) {
+    // this._apiService = apiService
+   }
 
   ngOnInit() {
        

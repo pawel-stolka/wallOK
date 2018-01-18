@@ -12,3 +12,8 @@
   .d3-chart .axis text {
     fill: #999;
   }
+
+.axis-x {
+  font-size: 26px;
+  color: green;
+}
