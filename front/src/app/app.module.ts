@@ -22,6 +22,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { PostComponent } from './post/post.component';
 import { AuthInterceptorService } from './authinterceptor.service';
 import { BarchartComponent } from './barchart/barchart.component'
+import { D3Service } from './d3.service';
 
 const routes = [
   // { path: '', redirectTo: 'home', pathMatch: 'full' }, 
@@ -58,7 +59,9 @@ const routes = [
     FormsModule,
     MatListModule
   ],
-  providers: [ApiService, {
+  providers: [ApiService,
+    D3Service,
+    {
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptorService,
     multi: true
