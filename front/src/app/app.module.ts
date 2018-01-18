@@ -24,7 +24,8 @@ import { AuthInterceptorService } from './authinterceptor.service';
 import { BarchartComponent } from './barchart/barchart.component'
 
 const routes = [
-  { path: '', component: HomeComponent }, 
+  // { path: '', redirectTo: 'home', pathMatch: 'full' }, 
+  { path: 'home', component: HomeComponent }, 
   { path: 'post', component: PostComponent }, 
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
